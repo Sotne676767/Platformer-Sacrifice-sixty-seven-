@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvssjl2h7fq2a"]
+
+[ext_resource type="Script" uid="uid://1xdj1ch6yb2d" path="res://assets/killzone.gd" id="1_i2cnj"]
+
+[node name="killzone" type="Area2D"]
+script = ExtResource("1_i2cnj")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
